@@ -1,0 +1,5 @@
+{
+  programs.xdg = {
+    enable = true;
+  };
+}
