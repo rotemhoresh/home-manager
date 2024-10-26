@@ -4,5 +4,8 @@
     defaultEditor = true;
   };
 
-  # xdg.configFile."".source = ./c;
+  xdg.configFile."nvim" = {
+    source = ./nvim;
+    recursive = true;
+  };
 }

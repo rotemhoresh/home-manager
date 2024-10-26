@@ -2,15 +2,30 @@
 
 {
   imports = [
+    ./firefox.nix
     ./git.nix
+    ./wofi
+    ./hyprland
     ./neovim
+    ./alacritty
   ];
 
   home.packages = with pkgs; [
-    # LSP
+    nixgl.nixGLIntel
+
+    # lsp
     nixd
 
-    # Formatters
+    # formatters
     nixfmt-rfc-style
+
+    # shells
+    bash
+    zsh
+
+    # programming languages
+    go
+    python3
+    lua
   ];
 }

@@ -1,9 +1,19 @@
 {
+  nixgl,
+  ...
+}:
+
+{
   imports = [
     ./modules
     ./packages.nix
     ./env.nix
   ];
+
+  nixGL = {
+    packages = nixgl.packages;
+    defaultWrapper = "mesa";
+  };
 
   home.username = "rotemhoresh";
   home.homeDirectory = "/home/rotemhoresh";
