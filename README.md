@@ -32,8 +32,9 @@ cd ~/.config
 git clone git@github.com:rotemhoresh/home-manager.git
 ```
 
-Activate the home manager configuration:
+Activate the home manager configuration, allowing unfree packages:
 
 ```bash
-home-manager switch
+export NIXPKGS_ALLOW_UNFREE=1
+home-manager switch --impure
 ```
