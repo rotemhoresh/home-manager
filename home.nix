@@ -1,4 +1,5 @@
 {
+  pkgs,
   nixgl,
   ...
 }:
@@ -6,7 +7,6 @@
 {
   imports = [
     ./modules
-    ./packages.nix
     ./env.nix
   ];
 
@@ -14,6 +14,11 @@
     packages = nixgl.packages;
     defaultWrapper = "mesa";
   };
+
+  fonts.fontconfig.enable = true;
+  home.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
 
   home.username = "rotemhoresh";
   home.homeDirectory = "/home/rotemhoresh";

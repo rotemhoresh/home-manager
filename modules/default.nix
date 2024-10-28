@@ -4,14 +4,20 @@
   imports = [
     ./firefox.nix
     ./git.nix
+    ./tmux
     ./wofi
     ./hyprland
     ./neovim
     ./alacritty
+    ./oh-my-posh
   ];
 
   home.packages = with pkgs; [
     nixgl.nixGLIntel
+
+    # apps
+    obsidian
+    spotify
 
     # lsp
     nixd
@@ -23,9 +29,13 @@
     bash
     zsh
 
+    # cli
+    neofetch
+    zoxide
+
     # programming languages
     go
-    python3
+    python313
     lua
   ];
 }
