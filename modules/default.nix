@@ -18,6 +18,7 @@
     # apps
     obsidian
     spotify
+    thunderbird
 
     # lsp
     nixd

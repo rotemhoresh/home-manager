@@ -1,5 +1,8 @@
--- open file explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- disable arrow keys
+vim.keymap.set("", "<up>", "<nop>", { noremap = true, desc = "Disable the Up arrow key" })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true, desc = "Disable the Down arrow key" })
+vim.keymap.set("", "<left>", "<nop>", { noremap = true, desc = "Disable the Left arrow key" })
+vim.keymap.set("", "<right>", "<nop>", { noremap = true, desc = "Disable the Right arrow key" })
 
 -- shift lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

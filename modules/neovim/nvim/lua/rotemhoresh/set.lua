@@ -1,3 +1,7 @@
+-- disable mouse
+vim.opt.mouse = ""
+
+-- set cursor
 vim.opt.guicursor = ""
 
 -- add line numbers and relative line numbers

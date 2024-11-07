@@ -15,6 +15,7 @@ return {
   },
 
   config = function()
+    vim.keymap.set("n", "D", vim.diagnostic.open_float, { desc = "Show diagnostics for content under the cursor" })
     vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 
     vim.filetype.add({ extension = { templ = "templ" } })
@@ -26,7 +27,7 @@ return {
 
       vim.fn.jobstart(cmd, {
         on_exit = function()
-          -- Reload the buffer only if it"s still the current buffer
+          -- Reload the buffer only if it's still the current buffer
           if vim.api.nvim_get_current_buf() == bufnr then
             vim.cmd("e!")
           end
@@ -59,14 +60,18 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
+        "rust_analyzer",
         "lua_ls",
         "gopls",
         "templ",
         "html",
         "htmx",
         "tailwindcss",
+        "cssls",
         "bashls",
         "jsonls",
+        "yamlls",
+        "taplo",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -113,7 +118,6 @@ return {
                   unusedparams = true, -- Detect unused parameters
                 },
                 staticcheck = true,    -- Enable static analysis
-                experimentalTemplateSupport = true,
               },
             },
             on_attach = function(client, bufnr)
