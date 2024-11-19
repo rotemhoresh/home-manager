@@ -10,6 +10,7 @@
     ./neovim
     ./alacritty
     ./oh-my-posh
+    # ./kanata
   ];
 
   home.packages = with pkgs; [
@@ -19,6 +20,7 @@
     obsidian
     spotify
     thunderbird
+    virtualbox
 
     # lsp
     nixd
