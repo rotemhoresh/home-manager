@@ -1,0 +1,10 @@
+theme = "nobg_rose_pine_moon"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 8
+rulers = [80]
+
+[editor.file-picker]
+hidden = false

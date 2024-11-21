@@ -2,24 +2,24 @@
 
 {
   imports = [
-    ./firefox.nix
+    # ./firefox.nix
     ./git.nix
     ./tmux
-    ./wofi
-    ./hyprland
+    # ./wofi
+    # ./hyprland
     ./neovim
-    ./alacritty
+    # ./alacritty
     ./oh-my-posh
     # ./kanata
+    ./helix
   ];
 
   home.packages = with pkgs; [
-    nixgl.nixGLIntel
+    # nixgl.nixGLIntel
 
     # apps
     obsidian
     spotify
-    thunderbird
     virtualbox
 
     # lsp

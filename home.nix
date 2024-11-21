@@ -11,10 +11,10 @@
     ./env.nix
   ];
 
-  nixGL = {
-    packages = nixgl.packages;
-    defaultWrapper = "mesa";
-  };
+  # nixGL = {
+  #   packages = nixgl.packages;
+  #   defaultWrapper = "mesa";
+  # };
 
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [

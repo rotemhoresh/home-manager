@@ -21,26 +21,26 @@
     {
       nixpkgs,
       home-manager,
-      nixgl,
+      # nixgl,
       ...
     }:
     let
       system = "x86_64-linux";
-      # pkgs = nixpkgs.legacyPackages.${system};
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [
-          nixgl.overlay
-        ];
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
+      # pkgs = import nixpkgs {
+      #   inherit system;
+      #   overlays = [
+      #     nixgl.overlay
+      #   ];
+      # };
     in
     {
       homeConfigurations."rotemhoresh" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = {
-          inherit nixgl;
-        };
+        # extraSpecialArgs = {
+        #   inherit nixgl;
+        # };
 
         modules = [
           ./home.nix
